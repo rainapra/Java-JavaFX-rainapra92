@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CustomerController">
+   <children>
+      <Button layoutX="231.0" layoutY="42.0" mnemonicParsing="false" onAction="#viewAccounts" text="View movies" textFill="#6414ee">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="244.0" layoutY="334.0" mnemonicParsing="false" onAction="#logout" text="Log out" textFill="#6a15f2">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+         </font></Button>
+      <TableView fx:id="tblCustomer" layoutX="88.0" layoutY="100.0" prefHeight="200.0" prefWidth="373.0">
+        <columns>
+          <TableColumn fx:id="MovieID" prefWidth="75.0" text="MovieID" />
+          <TableColumn fx:id="Name" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="Rating" prefWidth="75.0" text="Rating" />
+          <TableColumn fx:id="Genre" prefWidth="75.0" text="Genre" />
+          <TableColumn fx:id="Price" prefWidth="75.0" text="Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
