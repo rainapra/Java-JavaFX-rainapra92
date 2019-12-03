@@ -23,5 +23,6 @@
             <Font name="Berlin Sans FB Demi Bold" size="34.0" />
          </font>
       </Label>
+      <Button layoutX="404.0" layoutY="293.0" mnemonicParsing="false" onAction="#newuser" text="Register" />
    </children>
 </AnchorPane>
