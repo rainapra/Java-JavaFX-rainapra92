@@ -48,7 +48,7 @@ public class LoginController {
 		 
 		// authentication check
 		checkCredentials(username, password);
-			
+		
 	}
 	public void checkCredentials(String username, String password) {
 		Boolean isValid = model.getCredentials(username, password);
@@ -75,7 +75,18 @@ root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/CustomerView.
 		} catch (Exception e) {
 			System.out.println("Error occured while inflating view: " + e);
 		}
-
+	}
+	public void newuser() {
+		 //System.exit(0);
+		try {
+			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/RegisterView.fxml"));
+			Scene scene = new Scene(root);
+			//scene.getStylesheets().add(getClass().getResource("/application/styles.css").toExternalForm());
+			Main.stage.setScene(scene);
+			Main.stage.setTitle("Register");
+		} catch (Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
 	}
 }
 
