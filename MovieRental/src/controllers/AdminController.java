@@ -75,7 +75,32 @@ public class AdminController {
 		try {
 		AnchorPane root;
 		root = (AnchorPane)  FXMLLoader.load(getClass().getResource("/views/addmovie.fxml"));
+		
 				Main.stage.setTitle("Add Movie View");
+			Scene scene = new Scene(root);
+			Main.stage.setScene(scene);
+		} catch (Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
+}
+	
+	
+	public void DeletMovie(String Name) {
+		try {
+		AnchorPane root;
+		root = (AnchorPane)  FXMLLoader.load(getClass().getResource("/views/deletemovie.fxml"));
+				Main.stage.setTitle("Admin View");
+			Scene scene = new Scene(root);
+			Main.stage.setScene(scene);
+		} catch (Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
+}
+	public void delMovie() {
+		try {
+		AnchorPane root;
+		root = (AnchorPane)  FXMLLoader.load(getClass().getResource("/views/deletemovie.fxml"));
+				Main.stage.setTitle("Delete Movie View");
 			Scene scene = new Scene(root);
 			Main.stage.setScene(scene);
 		} catch (Exception e) {
@@ -120,7 +145,7 @@ public class AdminController {
 		try {
 			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/LoginView.fxml"));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("/application/styles.css").toExternalForm());
+			//scene.getStylesheets().add(getClass().getResource("/application/styles.css").toExternalForm());
 			Main.stage.setScene(scene);
 			Main.stage.setTitle("Login");
 		} catch (Exception e) {
