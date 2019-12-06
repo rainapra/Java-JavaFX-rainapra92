@@ -72,6 +72,30 @@ public class CustomerController{
 			System.out.println("Error occured while inflating view: " + e);
 		}
 	}
+	public void BuyMovie(String Name) {
+		try {
+		AnchorPane root;
+		root = (AnchorPane)  FXMLLoader.load(getClass().getResource("/views/buyMovie.fxml"));
+				Main.stage.setTitle("Customer View");
+			Scene scene = new Scene(root);
+			Main.stage.setScene(scene);
+		} catch (Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
+}
+	public void toMovie() {
+		try {
+		AnchorPane root;
+		root = (AnchorPane)  FXMLLoader.load(getClass().getResource("/views/buyMovie.fxml"));
+		
+				Main.stage.setTitle("Buy Movie View");
+			Scene scene = new Scene(root);
+			Main.stage.setScene(scene);
+		} catch (Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
+}
+	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void viewData(String sql) {
 		tblMovie = new TableView();
@@ -162,5 +186,25 @@ public class CustomerController{
 		cc.viewData("Select * from movie_db");
 	}
 
+	/*@FXML
+	private void buyMovie() {
+	    Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
+	    if (selectedPerson != null) {
+	        boolean okClicked = mainApp.showPersonEditDialog(selectedPerson);
+	        if (okClicked) {
+	            showPersonDetails(selectedPerson);
+	        }
+
+	    } else {
+	        // Nothing selected.
+	        Alert alert = new Alert(AlertType.WARNING);
+	        alert.initOwner(mainApp.getPrimaryStage());
+	        alert.setTitle("No Selection");
+	        alert.setHeaderText("No Person Selected");
+	        alert.setContentText("Please select a person in the table.");
+
+	        alert.showAndWait();
+	    }
+	}*/
 }
 
